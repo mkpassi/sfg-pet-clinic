@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
 
     <groupId>guru.spring5framework</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>2</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>sfg-pet-clinic</name>
     <description>SFG-PET-CLINIC project</description>
@@ -21,7 +22,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.4.RELEASE</version>
-        <relativePath /> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
@@ -37,17 +38,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
-                    <username>mkpassi@gmail.com</username>
-                    <password>$Mitesh12</password>
                     <goals>install</goals>
+                    <username>mkpassi</username>
+                    <password>$Mitesh12</password>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <scm>
-        <connection>scm:git:https://github.com/mkpassi/sfg-pet-clinic.git</connection>
-        <developerConnection>scm:git:https://github.com/mkpassi/sfg-pet-clinic.git</developerConnection>
+        <url>https://github.com/mkpassi/sfg-pet-clinic</url>
+        <connection>scm:git://github.com/mkpassi/sfg-pet-clinic.git</connection>
+        <developerConnection>scm:git://github.com/mkpassi/sfg-pet-clinic.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 </project>
