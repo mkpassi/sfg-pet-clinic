@@ -39,6 +39,7 @@
                     <goals>install</goals>
                     <username>mkpassi</username>
                     <password>$Mitesh12</password>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
