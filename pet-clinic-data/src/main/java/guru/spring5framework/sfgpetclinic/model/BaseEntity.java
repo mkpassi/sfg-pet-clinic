@@ -4,7 +4,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- *
+ * Base Entity
  */
 public class BaseEntity implements Serializable {
 
