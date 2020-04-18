@@ -4,9 +4,11 @@ import guru.spring5framework.sfgpetclinic.model.Owner;
 import guru.spring5framework.sfgpetclinic.model.Person;
 import guru.spring5framework.sfgpetclinic.services.CrudService;
 import guru.spring5framework.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap<Owner extends Person, Id extends Number> extends AbstractMapService<Owner,Long> implements OwnerService<Owner,Long> {
 
     @Override
