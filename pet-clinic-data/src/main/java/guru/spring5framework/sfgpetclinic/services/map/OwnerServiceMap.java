@@ -1,8 +1,6 @@
 package guru.spring5framework.sfgpetclinic.services.map;
 
-import guru.spring5framework.sfgpetclinic.model.Owner;
 import guru.spring5framework.sfgpetclinic.model.Person;
-import guru.spring5framework.sfgpetclinic.services.CrudService;
 import guru.spring5framework.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 
