@@ -33,11 +33,11 @@ public class OwnerServiceMap<Owner extends Person, Id extends Number> extends Ab
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return this.findByLastName(lastName);
     }
 }

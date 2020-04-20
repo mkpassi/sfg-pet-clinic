@@ -1,5 +1,6 @@
 package guru.spring5framework.sfgpetclinic.services.map;
 
+import guru.spring5framework.sfgpetclinic.model.BaseEntity;
 import guru.spring5framework.sfgpetclinic.model.Person;
 import guru.spring5framework.sfgpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,6 @@ public class VetServiceMap<Vet extends Person,Id extends Number> extends Abstrac
 
     @Override
     public Vet save(Vet vet) {
-        return save(vet.getId(),vet);
+        return super.save(vet);
     }
 }
