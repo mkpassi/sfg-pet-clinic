@@ -1,5 +1,6 @@
 package guru.spring5framework.sfgpetclinic.services.map;
 
+import guru.spring5framework.sfgpetclinic.model.BaseEntity;
 import guru.spring5framework.sfgpetclinic.model.Pet;
 import guru.spring5framework.sfgpetclinic.model.PetType;
 import guru.spring5framework.sfgpetclinic.services.PetTypeService;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class PetTypeMapService extends AbstractMapService<PetType,Long> implements PetTypeService<PetType,Long> {
+public class PetTypeServiceMap extends AbstractMapService<PetType,Long> implements PetTypeService{
 
     @Override
     public Set<PetType> findAll() {
