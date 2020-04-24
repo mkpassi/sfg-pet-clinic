@@ -1,10 +1,7 @@
 package guru.spring5framework.sfgpetclinic.bootstrap;
 
 import guru.spring5framework.sfgpetclinic.model.*;
-import guru.spring5framework.sfgpetclinic.services.OwnerService;
-import guru.spring5framework.sfgpetclinic.services.PetTypeService;
-import guru.spring5framework.sfgpetclinic.services.SpecialityService;
-import guru.spring5framework.sfgpetclinic.services.VetService;
+import guru.spring5framework.sfgpetclinic.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -18,13 +15,15 @@ public class DataLoader implements CommandLineRunner {
   private final VetService vetService;
   private final PetTypeService petTypeService;
   private final SpecialityService specialityService;
+  private final VisitService visitService;
 
   @Autowired
-  public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+  public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
     this.vetService = vetService;
     this.ownerService = ownerService;
     this.petTypeService = petTypeService;
     this.specialityService = specialityService;
+    this.visitService = visitService;
   }
 
   @Override
@@ -81,6 +80,11 @@ public class DataLoader implements CommandLineRunner {
     owner2.getPets().add(mikesPet);
     owner2.getPets().add(mikesPet2);
     ownerService.save(owner2);
+
+    Visit catVisit = new Visit();
+    catVisit.setPet(mikesPet);
+    catVisit.setDate(LocalDate.now());
+    catVisit.setDescription("Mikes Sneezy Cat");
 
     System.out.println("Loaded Owners..");
 
