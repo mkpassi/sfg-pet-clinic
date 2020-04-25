@@ -1,5 +1,13 @@
 package guru.spring5framework.sfgpetclinic.model;
 
+
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -7,6 +15,10 @@ import java.io.Serializable;
  * Base Entity
  */
 @MappedSuperclass
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BaseEntity implements Serializable {
 
     @Id // this is the id Value
@@ -15,11 +27,4 @@ public class BaseEntity implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
