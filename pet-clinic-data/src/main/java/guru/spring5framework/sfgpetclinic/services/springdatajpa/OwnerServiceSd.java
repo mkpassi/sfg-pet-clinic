@@ -40,7 +40,7 @@ public class OwnerServiceSd implements OwnerService {
     }
 
     @Override
-    public Owner fndById(Long aLong) {
+    public Owner findById(Long aLong) {
         return ownerRepository.findById(aLong).orElse(null);
     }
 

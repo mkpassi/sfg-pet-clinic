@@ -14,11 +14,12 @@ import java.io.Serializable;
 /**
  * Base Entity
  */
-@MappedSuperclass
+
 @Setter
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@MappedSuperclass
 public class BaseEntity implements Serializable {
 
     @Id // this is the id Value

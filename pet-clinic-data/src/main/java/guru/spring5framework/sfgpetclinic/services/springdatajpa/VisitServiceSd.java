@@ -28,7 +28,7 @@ public class VisitServiceSd implements VisitService {
     }
 
     @Override
-    public Visit fndById(Long aLong) {
+    public Visit findById(Long aLong) {
         return visitRepository.findById(aLong).orElse(null);
     }
 

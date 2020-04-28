@@ -28,7 +28,7 @@ public class SpecialityServiceSd implements SpecialityService {
     }
 
     @Override
-    public Speciality fndById(Long aLong) {
+    public Speciality findById(Long aLong) {
         return specialityRepository.findById(aLong).orElse(null);
     }
 

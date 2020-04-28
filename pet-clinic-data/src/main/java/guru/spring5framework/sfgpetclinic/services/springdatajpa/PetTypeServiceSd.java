@@ -27,7 +27,7 @@ public class PetTypeServiceSd implements PetTypeService {
     }
 
     @Override
-    public PetType fndById(Long aLong) {
+    public PetType findById(Long aLong) {
         return petTypeRepository.findById(aLong).orElse(null);
     }
 

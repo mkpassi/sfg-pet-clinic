@@ -31,7 +31,7 @@ public class VetServiceSd implements VetService {
     }
 
     @Override
-    public Vet fndById(Long aLong) {
+    public Vet findById(Long aLong) {
         return vetRepository.findById(aLong).orElse(null);
     }
 

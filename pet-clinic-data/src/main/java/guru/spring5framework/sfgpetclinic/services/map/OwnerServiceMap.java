@@ -39,7 +39,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
     }
 
     @Override
-    public Owner fndById(Long id) {
+    public Owner findById(Long id) {
         return super.findById(id);
     }
 
@@ -66,8 +66,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
         return super.save(object);
     }
 
-    @Override
-    public Owner findByLastName(String lastName) {
-        return this.findByLastName(lastName);
-    }
+  @Override
+  public Owner findByLastName(String lastName) {
+    return this.findAll().stream()
+        .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+        .findFirst()
+        .orElse(null);
+  }
 }

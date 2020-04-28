@@ -9,13 +9,13 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Table(name="visits")
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
+@Table(name="visits")
 public class Visit extends BaseEntity{
 
     @Column(name="date")

@@ -36,7 +36,7 @@ public class VisitServiceMap extends AbstractMapService<Visit,Long> implements V
     }
 
     @Override
-    public Visit fndById(Long aLong) {
+    public Visit findById(Long aLong) {
         return null;
     }
 }
