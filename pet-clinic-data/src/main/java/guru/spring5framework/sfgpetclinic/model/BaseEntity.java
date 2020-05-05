@@ -28,4 +28,8 @@ public class BaseEntity implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    public boolean isNew() {
+        return this.id == null;
+    }
+
 }

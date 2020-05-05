@@ -19,7 +19,7 @@ import java.util.Set;
 
 
 @ExtendWith(MockitoExtension.class)
-class OwnerServiceSdTest {
+public class OwnerServiceSdTest {
 
   private final Long OWNER_ID = 4l;
   private final String LAST_NAME = "Smith";
