@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -16,6 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name="pets")
+@ToString
 public class Pet extends BaseEntity{
 
   @Builder
@@ -25,7 +27,12 @@ public class Pet extends BaseEntity{
     this.petType = petType;
     this.owner = owner;
     this.birthDate = birthDate;
-    this.visits = visits;
+    if(visits == null){
+      visits = new HashSet<>();
+      this.visits = visits;
+    }else{
+      this.visits = visits;
+    }
   }
 
   @Column(name="name")
@@ -44,6 +51,7 @@ public class Pet extends BaseEntity{
 
   @OneToMany(cascade = CascadeType.ALL,mappedBy = "pet")
   private Set<Visit> visits = new HashSet<>();
+
 
 
 }

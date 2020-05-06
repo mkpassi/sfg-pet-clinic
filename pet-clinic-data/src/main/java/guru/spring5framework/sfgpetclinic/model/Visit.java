@@ -13,10 +13,16 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name="visits")
 public class Visit extends BaseEntity{
+
+    @Builder
+    public Visit (Long id, LocalDate date, String description) {
+        super(id);
+        this.date = date;
+        this.description = description;
+    }
 
     @Column(name="date")
     private LocalDate date;
